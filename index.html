@@ -2,8 +2,12 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="canonical" href="https://edujcordeiro.github.io/curriculo/">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <title>Prova M1</title>
 </head>
 <style>
@@ -79,6 +83,17 @@
     }
 </style>
 <body>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+            .then(function (){
+                console.log('service worker registered');
+            })
+            .catch(function (){
+                console.log('service worker failed');
+            });
+        }
+    </script>
     <div class="global">
         <p><span>#</span>GLOBAL</p>
         <div class="topo">
